@@ -10,8 +10,7 @@
 // +----------------------------------------------------------------------
 use think\facade\Route;
 
-Route::get('think', function () {
-    return 'hello,ThinkPHP6!';
-});
 
-Route::get('hello/:name', 'index/hello');
+Route::group(function(){
+  Route::rule('v1/test/test','app\index\controller\Test@index','GET');
+})->middleware('check');

@@ -7,15 +7,13 @@ use think\facade\Session;
  * Created by PhpStorm.
  * User: php
  * Date: 2021/8/6
- * Time: 23:07
+ * Time: 23:20
  */
-class  Test extends  BaseController
+class  Index extends  BaseController
 {
-
-
-    public function  index()
+    public function index()
     {
-       $test = Session::get('test');
-       var_dump($test);
+        Session::set('test','test');
+        echo 'index';
     }
 }
